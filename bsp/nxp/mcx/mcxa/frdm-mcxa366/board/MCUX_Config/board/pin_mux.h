@@ -77,6 +77,12 @@ void BOARD_InitBootPins(void);
  */
 void BOARD_InitPins(void);
 
+/*!
+ * @brief Configures PORT0_12~PORT0_27 as LCD_P16~LCD_P31 for onboard SLCD.
+ *
+ */
+void BOARD_InitSLCDPins(void);
+
 #if defined(__cplusplus)
 }
 #endif
