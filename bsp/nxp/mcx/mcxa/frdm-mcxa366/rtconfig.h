@@ -437,6 +437,7 @@
 
 /* Onboard Peripheral Drivers */
 
+#define BSP_USING_SLCD
 /* end of Onboard Peripheral Drivers */
 
 /* Board extended module Drivers */
