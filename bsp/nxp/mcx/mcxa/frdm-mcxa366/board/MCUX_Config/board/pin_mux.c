@@ -435,4 +435,38 @@ void BOARD_InitPins(void)
                                                      .lockRegister = kPORT_UnlockRegister};
     /* PORT1_2 (pin 137) is configured as CAN0_TXD */
     PORT_SetPinConfig(PORT1, 2U, &port1_2_pin137_config);
+
+#ifdef BSP_USING_CAN1
+    const port_pin_config_t port1_12_pin5_config = {/* Internal pull-up/down resistor is disabled */
+                                                    .pullSelect = kPORT_PullDisable,
+                                                    .pullValueSelect = kPORT_LowPullResistor,
+                                                    .slewRate = kPORT_FastSlewRate,
+                                                    .passiveFilterEnable = kPORT_PassiveFilterDisable,
+                                                    .openDrainEnable = kPORT_OpenDrainDisable,
+                                                    .driveStrength = kPORT_LowDriveStrength,
+                                                    .driveStrength1 = kPORT_NormalDriveStrength,
+                                                    /* Pin is configured as CAN1_RXD */
+                                                    .mux = kPORT_MuxAlt11,
+                                                    .inputBuffer = kPORT_InputBufferEnable,
+                                                    .invertInput = kPORT_InputNormal,
+                                                    .lockRegister = kPORT_UnlockRegister};
+    /* PORT1_12 (pin 5) is configured as CAN1_RXD */
+    PORT_SetPinConfig(PORT1, 12U, &port1_12_pin5_config);
+
+    const port_pin_config_t port1_17_pin10_config = {/* Internal pull-up/down resistor is disabled */
+                                                     .pullSelect = kPORT_PullDisable,
+                                                     .pullValueSelect = kPORT_LowPullResistor,
+                                                     .slewRate = kPORT_FastSlewRate,
+                                                     .passiveFilterEnable = kPORT_PassiveFilterDisable,
+                                                     .openDrainEnable = kPORT_OpenDrainDisable,
+                                                     .driveStrength = kPORT_LowDriveStrength,
+                                                     .driveStrength1 = kPORT_NormalDriveStrength,
+                                                     /* Pin is configured as CAN1_TXD */
+                                                     .mux = kPORT_MuxAlt11,
+                                                     .inputBuffer = kPORT_InputBufferEnable,
+                                                     .invertInput = kPORT_InputNormal,
+                                                     .lockRegister = kPORT_UnlockRegister};
+    /* PORT1_17 (pin 10) is configured as CAN1_TXD */
+    PORT_SetPinConfig(PORT1, 17U, &port1_17_pin10_config);
+#endif /* BSP_USING_CAN1 */
 }
