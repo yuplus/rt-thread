@@ -28,7 +28,7 @@ extern "C" {
 /* Colon between digit5 and digit4 (HH:MM / MM:SS). */
 #define SLCD_COLON (SLCD_P1 | SLCD_P4)
 /* Decimal point between digit3 and digit2. */
-#define SLCD_DOT   (SLCD_P6)
+#define SLCD_DOT (SLCD_P6)
 
 int rt_hw_slcd_init(void);
 void rt_hw_slcd_clear(void);

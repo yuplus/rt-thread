@@ -36,8 +36,7 @@
 #define SEGE 0x0800u
 
 /* Low byte -> pin_lo (A/B/C/D), high byte -> pin_hi (P/F/G/E). */
-static const uint16_t num_matrix[] =
-{
+static const uint16_t num_matrix[] = {
     SEGA | SEGB | SEGC | SEGD | SEGE | SEGF,                 /* 0 */
     SEGB | SEGC,                                           /* 1 */
     SEGA | SEGB | SEGG | SEGE | SEGD,                       /* 2 */
@@ -52,11 +51,10 @@ static const uint16_t num_matrix[] =
 };
 
 /* digit 1..6 -> low front-plane pin (high pin is low+1) */
-static const uint8_t digit_pin_lo[] = {0, 16, 18, 20, 22, 24, 26};
+static const uint8_t digit_pin_lo[] = { 0, 16, 18, 20, 22, 24, 26 };
 
 /* SLCD_Px point -> front-plane pin (phase A / SEGP) */
-static const uint8_t point_pin[] =
-{
+static const uint8_t point_pin[] = {
     23, /* P1 */
     21, /* P2 */
     19, /* P3 */
