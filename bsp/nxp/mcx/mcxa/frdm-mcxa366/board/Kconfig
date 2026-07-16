@@ -135,7 +135,7 @@ endmenu
 menu "Onboard Peripheral Drivers"
     config BSP_USING_SLCD
         bool "Enable onboard SLCD display"
-        default y
+        default n
         help
             Enable FRDM-MCXA366 onboard segment LCD (6 digits).
 
